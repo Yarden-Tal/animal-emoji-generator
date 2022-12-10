@@ -71,6 +71,30 @@ div > .emoji:hover {
   transform: rotateZ(-18deg);
 }
 
+footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-right: auto;
+  margin-left: 25px;
+  font-size: 22px;
+}
+
+a {
+  margin-left: 4px;
+  padding: 6px;
+  text-decoration: none;
+  color: coral;
+  text-shadow: 1px 1px 1px coral;
+}
+
+a:hover {
+  /* color: rgb(206, 18, 18); */
+  outline: solid white;
+  outline-style: inset;
+  transition: all 0.1s ease-in-out;
+}
+
 @keyframes pulse {
   0% {
     background-color: rgb(78, 204, 78);
