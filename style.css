@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: 7vw;
+  font-size: 5vw;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,9 @@ strong {
 }
 
 div > .emoji {
-  padding: 40px;
+  font-size: 10vw;
+  padding: 35px;
+  margin: 0.2em;
   border-radius: 30px;
   border-style: outset;
   outline: 1px solid;
@@ -110,9 +112,16 @@ a:hover {
   body {
     font-size: 4.5vw;
   }
+
   h1 {
     font-size: 7vw;
   }
+
+  div > .emoji {
+    font-size: 7vw;
+    padding: 25px;
+  }
+
   footer {
     margin-right: auto;
     margin-left: 25px;
