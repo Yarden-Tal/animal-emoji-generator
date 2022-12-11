@@ -1,10 +1,13 @@
-// DOM elements
-const button = document.querySelector(".generate-btn");
+// DOM ELEMENTS //
+const generateBtnEl = document.querySelector(".generate-btn");
+const copyButtonEl = document.querySelector(".copy-btn");
 const emojiEl = document.querySelector(".emoji");
 const emojiCodeEl = document.querySelector(".emoji-code");
 const emojiNameEl = document.querySelector(".emoji-name");
 
-// Get random emoji from emojis list
+// FUNCTIONS //
+
+// Get random emoji from list
 const getRandomEmoji = () => {
   let emoji = emojis.sort(() => 0.5 - Math.random())[0];
   const { htmlCode, name } = emoji;
@@ -18,8 +21,34 @@ const changeHtml = (emojiCode, emojiName) => {
   emojiNameEl.innerText = emojiName;
 };
 
+// Copy emoji
+const copyEmoji = async emoji => {
+  try {
+    const { clipboard } = navigator;
+    await clipboard.writeText(emoji);
+    showCopied();
+  } catch (e) {
+    alert(e);
+  }
+};
+
+// Show user copied successfully
+const showCopied = () => {
+  copyButtonEl.innerText = "הועתק ✔";
+  copyButtonEl.disabled = true;
+  setTimeout(() => {
+    copyButtonEl.disabled = false;
+    copyButtonEl.innerText = "העתק";
+  }, 1500);
+};
+
+// EVENTS //
+
 window.onload = () => getRandomEmoji();
-button.onclick = () => getRandomEmoji();
+generateBtnEl.onclick = () => getRandomEmoji();
+copyButtonEl.onclick = () => copyEmoji(emojiEl.innerHTML);
+
+// DATA //
 
 const emojis = [
   {
