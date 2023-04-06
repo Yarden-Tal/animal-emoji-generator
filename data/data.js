@@ -116,11 +116,11 @@ const emojis = [
     htmlCode: ["&#128016;"],
   },
   {
-    name: "dromedary camel ≊ camel",
+    name: "camel",
     htmlCode: ["&#128042;"],
   },
   {
-    name: "bactrian camel ≊ two-hump camel",
+    name: "two-hump camel",
     htmlCode: ["&#128043;"],
   },
   {
@@ -212,7 +212,7 @@ const emojis = [
     htmlCode: ["&#128039;"],
   },
   {
-    name: "dove of peace ≊ dove",
+    name: "dove",
     htmlCode: ["&#128330;"],
   },
   {
